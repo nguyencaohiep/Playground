@@ -143,11 +143,6 @@ img {
   padding: 2rem;
   background-color: white;
   border-radius: 25px;
-  display: flex;
-  align-items: stretch;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  direction: column;
 }
 .category__item:first-child {
   box-shadow: 0 30px 35px -5px rgba(255, 151, 195, 0.3);
@@ -311,16 +306,10 @@ img {
 .feature-best__desc {
   font-size: 1rem;
   color: #2b3d75;
-}
-
-.text-clamp {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
+  margin-top: auto;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.text-clamp--2 {
-  -webkit-line-clamp: 2;
 }
 
 .partner {
@@ -426,7 +415,9 @@ img {
   color: #1a2b5f;
   font-weight: 600;
 }
-.subscribe__social i {
+.subscribe__social a {
+  width: fit-content;
+  color: #1a2b5f;
   margin-left: 3rem;
   font-size: 1.5rem;
 }
@@ -444,6 +435,9 @@ img {
 .footer__item {
   width: 25%;
 }
+.footer__item:not(:first-child) {
+  padding-left: 5rem;
+}
 .footer__link {
   color: #1a2b5f;
   font-weight: 600;
@@ -451,6 +445,197 @@ img {
   display: block;
   width: fit-content;
   line-height: 2;
+}
+
+@media screen and (max-width: 1023px) {
+  .header__menu-item {
+    margin-left: 3rem;
+  }
+  .header__menu-item:last-child {
+    margin-left: 4rem;
+  }
+  .header__login {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .banner {
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+  }
+  .banner__heading {
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .banner__desc {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .category__item {
+    width: calc(50% - 20px);
+    margin-bottom: 3rem;
+  }
+  .category__image {
+    margin-bottom: 1rem;
+  }
+
+  .feature {
+    padding-top: 5rem;
+  }
+  .feature__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .feature-intro__item {
+    font-weight: 600;
+    font-size: 0.8rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .feature__item {
+    margin-bottom: 3rem;
+  }
+  .feature__item:nth-child(odd) .feature__info {
+    padding-left: 3rem;
+  }
+  .feature__item:nth-child(even) .feature__info {
+    padding-right: 3rem;
+  }
+  .feature__info {
+    padding-top: 5rem;
+  }
+  .feature__desc {
+    font-size: 0.8rem;
+    line-height: 1;
+    margin-bottom: 1.3rem;
+  }
+  .feature-best__item {
+    width: calc(50% - 1rem);
+  }
+  .feature-best__title {
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .feature-best__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  .feature-best__desc {
+    font-size: 0.8rem;
+  }
+
+  .partner {
+    margin-bottom: 6rem;
+  }
+  .partner__title {
+    padding-bottom: 4rem;
+  }
+
+  .connect {
+    margin-bottom: 8rem;
+  }
+  .connect__title {
+    font-size: 1.8rem;
+  }
+  .connect__notice {
+    font-size: 1.2rem;
+  }
+
+  .subscribe__container {
+    max-width: 700px;
+    padding-bottom: 4rem;
+  }
+  .subscribe__title {
+    font-size: 1.2rem;
+  }
+  .subscribe__form {
+    padding: 1rem;
+  }
+  .subscribe__input, .subscribe__button {
+    font-size: 0.8rem;
+  }
+  .subscribe__social a {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+  }
+
+  .footer__item {
+    padding-left: 3rem;
+    width: 33%;
+  }
+  .footer__item:first-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__menu-item {
+    margin-left: 3rem;
+  }
+  .header__menu-item:last-child {
+    margin-left: 4rem;
+  }
+  .header__login {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .category__item {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .feature__title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .feature__desc {
+    display: none;
+  }
+
+  .subscribe__title {
+    font-size: 1rem;
+  }
+  .subscribe__form {
+    padding: 0.8rem;
+  }
+  .subscribe__input, .subscribe__button {
+    font-size: 0.8rem;
+  }
+  .subscribe__social a {
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+  }
+
+  .footer__link {
+    font-size: 0.8rem;
+  }
+  .footer__item {
+    padding-left: 2rem;
+    width: 33%;
+  }
+  .footer__item:first-child {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
