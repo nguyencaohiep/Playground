@@ -9,6 +9,10 @@ body {
   line-height: 1.2;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 @mixin flex(
   $align: flex-start,
   $justify: flex-start,
@@ -462,6 +466,7 @@ img {
 
 @media screen and (max-width: 1023px) {
   .header {
+    padding-top: 3rem;
     &__menu {
       &-item {
         margin-left: 3rem;
@@ -489,7 +494,7 @@ img {
       font-weight: 400;
       margin-bottom: 3rem;
     }
-    padding-bottom: 10rem;
+    padding-bottom: 8rem;
   }
   .btn {
     font-size: 1rem;
@@ -607,13 +612,15 @@ img {
     }
   }
 }
+
 @media screen and (max-width: 767px) {
   .header {
+    padding-top: 2rem;
     &__menu {
       &-item {
         margin-left: 3rem;
         &:last-child {
-          margin-left: 4rem;
+          margin-left: 3.5rem;
         }
       }
     }
@@ -626,8 +633,12 @@ img {
   }
   .category {
     &__item {
-      width: 100%;
+      width: 50%;
       margin-bottom: 3rem;
+      padding: 1rem;
+    }
+    &__image {
+      height: 12rem;
     }
   }
   .feature {
@@ -653,6 +664,15 @@ img {
     &__social a {
       font-size: 1.2rem;
       margin-left: 1.5rem;
+    }
+  }
+  .connect {
+    &__list {
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: calc(50% - 1rem);
+      margin-bottom: 0.5rem;
     }
   }
   .footer {
